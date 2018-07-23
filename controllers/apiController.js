@@ -43,6 +43,10 @@ module.exports = (app) => {
                 city: req.body.city,
                 address: req.body.address,
                 phone: req.body.phone
+            }, (err, person) => {
+                if(err) throw err;
+
+                res.send("Person updated.");
             });
 
         } else { 
@@ -58,6 +62,8 @@ module.exports = (app) => {
 
             newPerson.save((err) => {
                 if (err) throw err;
+
+                res.send("New person was created.");
             }); // Save a new person
 
         }
@@ -69,6 +75,8 @@ module.exports = (app) => {
 
         Person.findByIdAndRemove(req.body.id, (err) => {
             if (err) throw err;
+
+            res.send("Person deleted.");
         });
 
     });
