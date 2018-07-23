@@ -1,49 +1,49 @@
-.header {
+.Header {
     background-color: #ecf0f1;
     height: 50px; 
 }
   
-.header nav {
+.Header nav {
     float: right;
     height: 100%;
 }
   
-.header__navigationItems {
+.NavigationItems {
     list-style: none;
 }
   
-.header__navigationItem {
+.NavigationItem {
     display: inline-block;
-    padding: 15px 0;
+    padding: 13px 0;
     height: 100%;
 }
   
-.header__navigationItem a {
-    color: #1abc9c;
+.NavigationItem a {
+    color: #2c3e50;
     text-decoration: none;
     height: 100%;
     padding: 15px 10px;
     transition: all .3s ease-in-out;
 }
   
-.header__navigationItem a:hover,
-.header__navigationItem a:active,
-.header__navigationItem a.active {
-    background-color: #16a085;
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active {
+    background-color: #34495e;
     color: white;
 }
   
-.header__logo {
-    padding: 15px;
+.Logo {
+    padding: 10px;
     color: #545454;
 }
   
-.header__logo p {
+.Logo p {
     font-size: 1.2rem;
   }
   
 @media only screen and (max-width: 400px) {
-    .header__navigationItem a {
+    .NavigationItem a {
         padding: 17px 5px;
         font-size: 0.8rem;
         transition: all .3s ease-in-out;
@@ -52,7 +52,7 @@
 }
   
 @media only screen and (max-width: 310px) {
-    .header__navigation-item a {
+    .Navigation-item a {
       padding: 17px 3px;
       font-size: 0.7rem;
       transition: all .3s ease-in-out;
