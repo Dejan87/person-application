@@ -1,0 +1,9 @@
+.Table {
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+    background-color: rgba(44,62,80,0.8);
+    color: #fff;
+}
