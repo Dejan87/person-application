@@ -4,10 +4,26 @@ import { connect } from "react-redux";
 import Person from "../../components/Person/Person";
 import * as actions from "../../store/actions";
 import * as classes from "./Home.css";
+import axios from "axios";
 
 class Home extends Component {
     componentDidMount() {
         this.props.onInitPersons();
+    }
+
+    deletePersonHandler = (id) => {
+        let personData = {
+            id: id
+        }
+
+        // Delete a person
+        axios.delete("/api/person", { data: personData })
+            .then(response => {
+                this.props.onInitPersons();
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
 
     render() {
@@ -20,7 +36,8 @@ class Home extends Component {
                         createdDate={person.createdDate}
                         city={person.city}
                         address={person.address}
-                        phone={person.phone}/>
+                        phone={person.phone}
+                        delete={() => this.deletePersonHandler(person._id)}/>
         });
 
         return (
