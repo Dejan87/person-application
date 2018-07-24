@@ -9,3 +9,21 @@
 .Delete:hover {
     background-color: #81261d;
 }
+
+.Update {
+    background-color: #fff;
+    color: #c0392b;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out; 
+}
+
+.Update:hover {
+    background-color: #c0392b;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out; 
+}

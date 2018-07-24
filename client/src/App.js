@@ -5,6 +5,7 @@ import Aux from "./hoc/Auxiliary/Auxiliary";
 import Navigation from "./components/Navigation/Navigation";
 import Home from "./containers/Home/Home";
 import AddPerson from "./containers/AddPerson/AddPerson";
+import UpdatePerson from "./containers/UpdatePerson/UpdatePerson";
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
         <main>
             <Switch>
                 <Route path="/add-person" exact component={AddPerson} />
+                <Route path="/update-person/:id" exact component={UpdatePerson} />
                 <Route path="/" exact component={Home} />
                 <Redirect to="/" />
             </Switch>

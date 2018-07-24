@@ -10,6 +10,7 @@ const person = (props) => (
       <td>{props.city}</td>
       <td>{props.address}</td>
       <td>{props.phone}</td>
+      <td><span onClick={props.update} className={classes.Update}>Update</span></td>
       <td><span onClick={props.delete} className={classes.Delete}>Delete</span></td>
     </tr>
 );

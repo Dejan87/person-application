@@ -26,6 +26,10 @@ class Home extends Component {
             });
     }
 
+    updatePersonHandler = (id) => {
+        this.props.history.push("/update-person/" + id); // Pass person's id to update page
+    }
+
     render() {
         // Create all table cells
         const persons = this.props.persons.map(person => {
@@ -37,7 +41,8 @@ class Home extends Component {
                         city={person.city}
                         address={person.address}
                         phone={person.phone}
-                        delete={() => this.deletePersonHandler(person._id)}/>
+                        delete={() => this.deletePersonHandler(person._id)}
+                        update={() => this.updatePersonHandler(person._id)}/>
         });
 
         return (
