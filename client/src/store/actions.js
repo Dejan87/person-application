@@ -1,13 +1,6 @@
 import * as actionTypes from "./actionsTypes";
 import axios from "axios";
 
-export const addPerson = personData => {
-    return {
-        type: actionTypes.ADD_PERSON,
-        data: personData
-    };
-};
-
 export const deletePerson = personId => {
     return {
         type: actionTypes.DELETE_PERSON,

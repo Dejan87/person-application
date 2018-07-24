@@ -55,6 +55,7 @@ module.exports = (app) => {
             const newPerson = Person({
                 name: req.body.name,
                 surname: req.body.surname,
+                createdDate: req.body.createdDate,
                 city: req.body.city,
                 address: req.body.address,
                 phone: req.body.phone
